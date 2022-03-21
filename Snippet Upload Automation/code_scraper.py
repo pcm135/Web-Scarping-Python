@@ -13,7 +13,7 @@ divs = soup.find_all("div", class_="file-actions")
 
 for div in divs:
     href = div.find('a', href=True)['href']
-    url = "https://gist.github.com" + href
+    url = f"https://gist.github.com{href}"
     filename = "snippet_code/" + url.split('/')[-1]
     print(filename)
 

@@ -20,23 +20,21 @@ for module in modules:
     # duration.append("")
 
     topics = module.find_all("div", class_="card p-0")
-    count = 1
-    for topic in topics:
+    for count, topic in enumerate(topics, start=1):
         module_name.append("")
         topic_name.append("\t" + str(count) +". " + topic.a.text.strip())
-        count += 1
-        # topic_name.append(topic.a.text.strip())
-        # sno.append("")
-        # que_name.append("")
-        # duration.append("")
+            # topic_name.append(topic.a.text.strip())
+            # sno.append("")
+            # que_name.append("")
+            # duration.append("")
 
-        # ques = topic.find_all("div", class_="card-body px-4 p-2 card-body-n")
-        # for que in ques:
-        #     module_name.append("")
-        #     topic_name.append("")
-            # sno.append(que.div.div.text.strip())
-            # que_name.append(que.a.text.strip())
-            # duration.append(que.span.text.strip())
+            # ques = topic.find_all("div", class_="card-body px-4 p-2 card-body-n")
+            # for que in ques:
+            #     module_name.append("")
+            #     topic_name.append("")
+                # sno.append(que.div.div.text.strip())
+                # que_name.append(que.a.text.strip())
+                # duration.append(que.span.text.strip())
 
 # dist = {"Modules":module_name, "Topics": topic_name, "SNO":sno, "Sub Topics":que_name, "Duration":duration}
 # df = pd.DataFrame(dist)
